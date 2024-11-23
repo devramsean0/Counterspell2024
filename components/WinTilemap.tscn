@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://k4dj0lwt3ita"]
 
-[ext_resource type="TileSet" uid="uid://chvs84g74atxf" path="res://assets/Tileset.tres" id="1_2q6is"]
+[ext_resource type="TileSet" uid="uid://b70rmayl33y5p" path="res://assets/WinTileset.tres" id="1_ppk2l"]
 
 [node name="WinTilemap" type="TileMapLayer"]
-tile_set = ExtResource("1_2q6is")
+tile_set = ExtResource("1_ppk2l")
