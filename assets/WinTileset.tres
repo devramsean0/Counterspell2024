@@ -1,0 +1,12 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b70rmayl33y5p"]
+
+[ext_resource type="Texture2D" uid="uid://btr8mssetbyk1" path="res://assets/WinTileset.png" id="1_ieqob"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdwgk"]
+texture = ExtResource("1_ieqob")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_kdwgk")
