@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi2051hw3s17u"]
+[gd_scene load_steps=6 format=3 uid="uid://s2np6dmo6wx1"]
 
 [ext_resource type="Texture2D" uid="uid://cpaomi3lhmgeh" path="res://player.png" id="1_i6ng2"]
 [ext_resource type="Script" path="res://player.gd" id="1_xibq7"]
@@ -17,6 +17,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygjs0"]
+size = Vector2(64, 64)
+
 [node name="Player" type="CharacterBody2D"]
 platform_wall_layers = 23
 script = ExtResource("1_xibq7")
@@ -28,3 +31,8 @@ shape = SubResource("RectangleShape2D_f5epl")
 position = Vector2(9.53674e-07, 9.53674e-07)
 scale = Vector2(1.875, 1.875)
 sprite_frames = SubResource("SpriteFrames_bwy0n")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ygjs0")

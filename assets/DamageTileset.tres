@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bll5g7pq2cnns"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://drae0m8k5tmcs"]
 
 [ext_resource type="Texture2D" uid="uid://hn33lylep13i" path="res://assets/DamageTileset.png" id="1_qilpd"]
 
@@ -29,6 +29,5 @@ texture_region_size = Vector2i(32, 32)
 
 [resource]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
-physics_layer_1/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_sei21")
