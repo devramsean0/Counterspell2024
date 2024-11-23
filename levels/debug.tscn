@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://61lbqffdpkga"]
+
+[ext_resource type="PackedScene" uid="uid://c4tcdnxybuvrw" path="res://components/DamageTilemap.tscn" id="1_t0usf"]
+[ext_resource type="PackedScene" uid="uid://c66efcfbwp71x" path="res://components/Tilemap.tscn" id="2_ou3xb"]
+
+[node name="Debug" type="Node2D"]
+
+[node name="DamageTilemap" parent="." instance=ExtResource("1_t0usf")]
+
+[node name="Tilemap" parent="." instance=ExtResource("2_ou3xb")]
