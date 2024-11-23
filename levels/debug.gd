@@ -1,9 +1,10 @@
 extends Node2D
 
 @export var health = 10
+var has_split = false
 
 func split():
-	print("BANANA")
+	has_split = true
 	var current_player: Node2D = $Player
 	var pos = current_player.position
 	self.remove_child(current_player)
@@ -21,7 +22,7 @@ func split():
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_split"):
+	if event.is_action_pressed("ui_split") and not has_split:
 		split()
 
 func _ready() -> void:
