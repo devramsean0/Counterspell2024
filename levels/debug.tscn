@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://k4dj0lwt3ita" path="res://components/WinTilemap.tscn" id="1_ssb44"]
 [ext_resource type="PackedScene" uid="uid://c4tcdnxybuvrw" path="res://components/DamageTilemap.tscn" id="1_t0usf"]
 [ext_resource type="PackedScene" uid="uid://c66efcfbwp71x" path="res://components/Tilemap.tscn" id="2_ou3xb"]
-[ext_resource type="PackedScene" path="res://player.tscn" id="4_35ifs"]
+[ext_resource type="PackedScene" uid="uid://bi2051hw3s17u" path="res://player.tscn" id="4_35ifs"]
 
 [node name="Debug" type="Node2D"]
 
