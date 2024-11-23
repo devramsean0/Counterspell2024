@@ -4,11 +4,18 @@ extends Node2D
 
 func split():
 	print("BANANA")
-	var current_player = $Player
+	var current_player: Node2D = $Player
+	var pos = current_player.position
 	self.remove_child(current_player)
 	var scene = preload("res://player.tscn")
 	var player1 = scene.instantiate()
 	var player2 = scene.instantiate()
+	player1.position = pos
+	player1.position.x -= - 8
+	player2.position = pos
+	player2.position.x -= + 8
+	player1.scale = current_player.scale * Vector2(0.5, 0.5)
+	player2.scale = current_player.scale * Vector2(0.5, 0.5)
 	self.add_child(player1)
 	self.add_child(player2)
 

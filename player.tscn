@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://player.gd" id="1_xibq7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f5epl"]
-size = Vector2(64, 64)
+size = Vector2(60, 60)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bwy0n"]
 animations = [{
@@ -25,5 +25,6 @@ script = ExtResource("1_xibq7")
 shape = SubResource("RectangleShape2D_f5epl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
+position = Vector2(9.53674e-07, 9.53674e-07)
+scale = Vector2(1.875, 1.875)
 sprite_frames = SubResource("SpriteFrames_bwy0n")
