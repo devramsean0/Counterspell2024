@@ -1,3 +1,4 @@
+class_name Level
 extends Node2D
 
 @export var prev: Resource = preload("res://levels/debug.tscn")
@@ -10,7 +11,7 @@ signal died
 signal won
 
 
-func on_player_collision(collision: Node2D):
+func on_player_collision(player: Player, collision: Node2D):
 	print(collision.name)
 	
 	if collision == $DamageTilemap:
@@ -18,6 +19,7 @@ func on_player_collision(collision: Node2D):
 		died.emit()
 	elif collision == $WinTilemap:
 		# win
+		remove_child(player)
 		won.emit()
 
 func split():
@@ -41,10 +43,6 @@ func split():
 	self.add_child(player2)
 	
 	can_split = false
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_split"):
-		split()
 
 func _ready() -> void:
 	$Player.collided.connect(on_player_collision)

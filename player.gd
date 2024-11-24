@@ -1,7 +1,7 @@
+class_name Player
 extends CharacterBody2D
 
-signal collided(event: Node2D)
-
+signal collided(player: Player, event: Node2D)
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -26,4 +26,4 @@ func _physics_process(delta: float) -> void:
 	var event = move_and_slide()
 	if event:
 		for body in $Area2D.get_overlapping_bodies():
-			collided.emit(body)
+			collided.emit(self, body)

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=4 uid="uid://c47164c2p7fvu"]
+[gd_scene load_steps=3 format=4 uid="uid://c47164c2p7fvu"]
 
 [ext_resource type="PackedScene" uid="uid://61lbqffdpkga" path="res://levels/debug.tscn" id="1_wme2o"]
+[ext_resource type="PackedScene" uid="uid://s8f6sspgw8nf" path="res://levels/level2.tscn" id="2_ywoik"]
 
 [node name="Level" instance=ExtResource("1_wme2o")]
+next = ExtResource("2_ywoik")
 
 [node name="WinTilemap" parent="." index="0"]
 tile_map_data = PackedByteArray("AAAhABEAAAAAAAAAAAAhAAsAAAAAAAAAAAAhAAwAAAAAAAAAAAA=")
