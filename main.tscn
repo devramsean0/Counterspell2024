@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4akniw2xwmo"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_w8puw"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_w8puw"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_0vxgm"]
 viewport_path = NodePath("CurrentLevel")
