@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://61lbqffdpkga"]
+[gd_scene load_steps=7 format=4 uid="uid://61lbqffdpkga"]
 
 [ext_resource type="Script" path="res://scripts/level_manager.gd" id="1_yped0"]
 [ext_resource type="PackedScene" uid="uid://k4dj0lwt3ita" path="res://components/WinTilemap.tscn" id="2_5kt16"]
 [ext_resource type="PackedScene" uid="uid://c4tcdnxybuvrw" path="res://components/DamageTilemap.tscn" id="3_3cfib"]
 [ext_resource type="PackedScene" uid="uid://c66efcfbwp71x" path="res://components/Tilemap.tscn" id="4_4brsj"]
 [ext_resource type="PackedScene" uid="uid://s2np6dmo6wx1" path="res://player.tscn" id="5_pmown"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abotp"]
+size = Vector2(462, 261)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_yped0")
@@ -18,3 +21,9 @@ tile_map_data = PackedByteArray("AAAAABQAAgAAAAAAAAABABQAAgAAAAAAAAACABQAAgAAAAA
 
 [node name="Player" parent="." instance=ExtResource("5_pmown")]
 position = Vector2(154, 153)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(231, 130.5)
+shape = SubResource("RectangleShape2D_abotp")
