@@ -31,12 +31,10 @@ func new_scene(scene: Resource):
 	current_viewport.add_child(current_scene)
 
 func current_won():
-	print("yay i win")
 	rotate_scenes()
 	new_scene(previous_scene.next)
 	
 func die():
-	print("fuck ow i died")
 	rotate_scenes()
 	free_previous()
 	_ready()
