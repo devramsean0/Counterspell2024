@@ -9,6 +9,4 @@ script = ExtResource("1_w8puw")
 [node name="Player" parent="." instance=ExtResource("1_asr7j")]
 position = Vector2(36, 35)
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
-z_index = 1000
-scale = Vector2(0.2, 0.2)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

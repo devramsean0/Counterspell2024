@@ -11,12 +11,14 @@ func free_previous():
 		previous_scene = null
 
 func rotate_scenes():
+	free_previous()
+	
 	if current_scene:
 		previous_scene = current_scene
 		previous_scene.won.disconnect(current_won)
 		previous_scene.won.connect(die)
 		remove_child(previous_scene)
-		$CanvasGroup.add_child(previous_scene)
+		$CanvasLayer.add_child(previous_scene)
 
 func new_scene(scene: Resource):
 	var object = scene.instantiate()
@@ -26,11 +28,12 @@ func new_scene(scene: Resource):
 	add_child(current_scene)
 
 func current_won():
+	print("yay i win")
 	rotate_scenes()
 	new_scene(previous_scene.next)
 	
 func die():
-	print("todo!")
+	print("fuck ow i died")
 	rotate_scenes()
 	free_previous()
 	_ready()
