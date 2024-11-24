@@ -1,8 +1,8 @@
 class_name Level
 extends Node2D
 
-@export var prev: Resource = preload("res://levels/debug.tscn")
-@export var next: Resource = preload("res://levels/debug.tscn")
+@export var prev: Resource = preload("res://levels/level_manager.tscn")
+@export var next: Resource = preload("res://levels/level_manager.tscn")
 
 var player = preload("res://player.tscn")
 var can_split = true
