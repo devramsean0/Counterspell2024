@@ -5,35 +5,36 @@ extends Node2D
 var current_scene: Node2D
 var previous_scene: Node2D
 
-func current_won():
+func free_previous():
 	if previous_scene:
 		previous_scene.queue_free()
 		previous_scene = null
-	
-	previous_scene = current_scene
-	previous_scene.z_index = 10000
-	previous_scene.won.disconnect(current_won)
-	previous_scene.won.connect(die)
-	previous_scene.scale = Vector2(0.2, 0.2)
-	
-	current_scene = previous_scene.next.instantiate()
+
+func rotate_scenes():
+	if current_scene:
+		previous_scene = current_scene
+		previous_scene.won.disconnect(current_won)
+		previous_scene.won.connect(die)
+		remove_child(previous_scene)
+		$CanvasGroup.add_child(previous_scene)
+
+func new_scene(scene: Resource):
+	var object = scene.instantiate()
+	current_scene = object
 	current_scene.died.connect(die)
 	current_scene.won.connect(current_won)
 	add_child(current_scene)
+
+func current_won():
+	rotate_scenes()
+	new_scene(previous_scene.next)
 	
 func die():
 	print("todo!")
-	if previous_scene:
-		previous_scene.queue_free()
-		previous_scene = null
-	current_scene.queue_free()
+	rotate_scenes()
+	free_previous()
 	_ready()
-	
 
 func _ready() -> void:
 	var intro_level_scene = preload("res://levels/intro.tscn")
-	var intro = intro_level_scene.instantiate()
-	current_scene = intro
-	current_scene.died.connect(die)
-	current_scene.won.connect(current_won)
-	add_child(intro)
+	new_scene(intro_level_scene)
