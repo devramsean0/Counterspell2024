@@ -30,3 +30,9 @@ z_index = 2
 scale = Vector2(0.4, 0.4)
 texture = SubResource("ViewportTexture_ehdo7")
 centered = false
+
+[node name="PreviousLevelBorder" type="ColorRect" parent="."]
+z_index = 1
+offset_right = 462.8
+offset_bottom = 261.2
+color = Color(0, 0, 0, 1)

@@ -14,6 +14,8 @@ signal won
 func on_player_collision(player: Player, collision: Node2D):
 	print(collision.name)
 	
+	var acting = Input.is_action_pressed("ui_input_action")
+	
 	if collision == $DamageTilemap:
 		# kill the player
 		died.emit()
