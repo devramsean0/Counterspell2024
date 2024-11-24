@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	var event = move_and_slide()
-	if event:
-		for body in $Area2D.get_overlapping_bodies():
-			collided.emit(self, body)
+	move_and_slide()
+	
+	for body in $Area2D.get_overlapping_bodies():
+		collided.emit(self, body)
