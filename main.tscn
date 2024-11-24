@@ -1,26 +1,13 @@
-[gd_scene load_steps=5 format=4 uid="uid://bdggpekrrrt07"]
+[gd_scene load_steps=3 format=4 uid="uid://cyqcurun0ivwx"]
 
-[ext_resource type="Texture2D" uid="uid://d2x8w0edhn0w1" path="res://Frame 7.png" id="1_4hq24"]
-[ext_resource type="PackedScene" uid="uid://bi2051hw3s17u" path="res://player.tscn" id="1_asr7j"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2mk5"]
-texture = ExtResource("1_4hq24")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-
-[sub_resource type="TileSet" id="TileSet_tsmay"]
-tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
-sources/2 = SubResource("TileSetAtlasSource_o2mk5")
+[ext_resource type="PackedScene" path="res://player.tscn" id="1_asr7j"]
+[ext_resource type="TileSet" uid="uid://chvs84g74atxf" path="res://assets/Tileset.tres" id="1_ryss2"]
 
 [node name="Main" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAA0AAgAAAAAAAAABAA0AAgAAAAAAAAACAA0AAgAAAAAAAAADAA0AAgAAAAAAAAAEAA0AAgAAAAAAAAAFAA0AAgAAAAAAAAAGAA0AAgAAAAAAAAAHAA0AAgAAAAAAAAAIAA0AAgAAAAAAAAAJAA0AAgAAAAAAAAAKAA0AAgAAAAAAAAALAA0AAgAAAAAAAAAMAA0AAgAAAAAAAAANAA0AAgAAAAAAAAAOAA0AAgAAAAAAAAAPAA0AAgAAAAAAAAAQAA0AAgAAAAAAAAARAA0AAgAAAAAAAAASAA0AAgAAAAAAAAATAA0AAgAAAAAAAAAUAA0AAgAAAAAAAAAVAA0AAgAAAAAAAAAWAA0AAgAAAAAAAAAXAA0AAgAAAAAAAAAYAA0AAgAAAAAAAAAYAA4AAgAAAAAAAAAZAA4AAgAAAAAAAAAZAA0AAgAAAAAAAAAaAA0AAgAAAAAAAAAbAA0AAgAAAAAAAAAcAA0AAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_tsmay")
+tile_set = ExtResource("1_ryss2")
 collision_visibility_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_asr7j")]
