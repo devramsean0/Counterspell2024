@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://drae0m8k5tmcs"]
 
-[ext_resource type="Texture2D" uid="uid://hn33lylep13i" path="res://assets/DamageTileset.png" id="1_qilpd"]
+[ext_resource type="Texture2D" uid="uid://bs7w6pxhkk8xl" path="res://assets/DamageTileset.png" id="1_qilpd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sei21"]
 texture = ExtResource("1_qilpd")
@@ -29,6 +29,8 @@ texture_region_size = Vector2i(32, 32)
 7:1/0 = 0
 6:0/0 = 0
 6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 8, 8, 0, 0, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -8.66206, -16, -9.01561, -12.7279, -2.12132, -8.48528, -8.66206, -4.77297, -2.2981, -3.35876, -2.65165, -1.59099, -8.83884, 0.530331, -9.19239, 3.00521, -1.76777, 4.24264, -1.59099, 7.07107, -9.36917, 8.83884, -9.01561, 10.9602, -2.47487)
 
 [resource]
 tile_size = Vector2i(32, 32)
